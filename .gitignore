@@ -23,3 +23,6 @@ pnpm-debug.log*
 # leftover Netlify starter assets
 public/images/
 src/assets/
+
+# Local Netlify folder
+.netlify/
