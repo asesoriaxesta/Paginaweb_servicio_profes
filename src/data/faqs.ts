@@ -37,14 +37,15 @@ export const faqs = [
         q: '¿Puedo ser autónomo/a y no presentar ni 303 ni 130?',
         a: [
             'Sí, si se cumplen esos dos requisitos (IVA e IRPF), entre otros.',
-            'No presentar esos modelos no elimina obligaciones: siguen los ingresos y gastos, las facturas, y el rendimiento en la Renta anual.'
+            'Que no presentes modelos trimestrales no significa que no haya que llevar libros. Siguen los ingresos y gastos, las facturas, los libros registro y el rendimiento en la Renta anual.'
         ]
     },
     {
         q: '¿Y si no encajo?',
         a: [
             'Si la mayor parte de tus ingresos no lleva retención en factura, si hay IVA habitual u otras actividades a analizar, o si la enseñanza no está realmente exenta, este pack no es el camino.',
-            'Lo vemos juntos por escrito. Esta página no es un asesoramiento ni un encargo.'
+            'Escríbenos igual. Buscamos una solución que se adapte a tu actividad.',
+            'Esta página no es un asesoramiento ni un encargo.'
         ]
     },
     {
@@ -60,6 +61,14 @@ export const faqs = [
             'La Renta anual, según rendimientos. Lo revisaremos cada ejercicio.',
             'Control de la cuota de autónomo, ajustada a rendimientos (reajuste y regularización anual). No prometemos que pagues menos: la revisamos para que no se quede desfasada.',
             'Somos Iria e Iago, las mismas. El servicio está más adaptado porque esta actividad nos da menos trabajo, no porque sea de menos nivel.'
+        ]
+    },
+    {
+        q: '¿Si no presento 303 ni 130, hace falta llevar libros?',
+        a: [
+            'Sí. Que no presentes modelos trimestrales no significa que no necesites libros. El 303 y el 130 son autoliquidaciones del trimestre; los libros son el registro de la actividad, todo el año, para la Renta y por si Hacienda pregunta.',
+            'La contabilidad completa del Código de Comercio, en este perfil, normalmente no es obligatoria. Los libros registro de ingresos y gastos sí. Llevarlos al día cambia el trato en una comprobación: se ve qué has facturado, qué gastos te deduces y con qué justificante. Si no están, o están a medias, cuesta defender la Renta y un gasto puede no admitirse.',
+            'En el pack los llevamos nosotros. No es papel extra: es tener la actividad ordenada aunque el trimestre sea más sencillo.'
         ]
     },
     {
