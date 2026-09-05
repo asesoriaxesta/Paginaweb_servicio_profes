@@ -148,7 +148,7 @@
     }
 
     .xesta-map .leaflet-tile-pane {
-        filter: grayscale(0.2) sepia(0.18) saturate(0.75) hue-rotate(55deg) contrast(0.95);
+        filter: grayscale(0.45) sepia(0.28) saturate(0.55) hue-rotate(62deg) contrast(0.92) brightness(1.06);
     }
 
     .xesta-map .leaflet-control-zoom a {
