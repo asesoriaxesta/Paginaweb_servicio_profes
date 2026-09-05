@@ -1,0 +1,39 @@
+---
+import Logo from './Logo.astro';
+import { EMAIL, PHONE_DISPLAY, PHONE_TEL, mailtoHref } from '../lib/cta';
+---
+
+<footer class="border-t border-xesta-line">
+    <div class="wrap grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div>
+            <Logo />
+            <p class="mt-4 max-w-xs text-sm leading-relaxed text-xesta-muted">
+                Somos Iria e Iago. Un despacho gallego para quien vive de la cultura.
+            </p>
+        </div>
+        <div>
+            <h2 class="font-heading text-sm font-bold uppercase tracking-wider">Contacto</h2>
+            <ul class="mt-4 space-y-2 text-sm">
+                <li>
+                    <a class="link" href={mailtoHref}>{EMAIL}</a>
+                </li>
+                <li>
+                    <a class="link" href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a>
+                </li>
+                <li>
+                    <a class="link" href="https://asesoriaxesta.com/es/">asesoriaxesta.com</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="font-heading text-sm font-bold uppercase tracking-wider">Esta página</h2>
+            <ul class="mt-4 space-y-2 text-sm">
+                <li>
+                    <a class="link" href="/preguntas">Preguntas frecuentes</a>
+                </li>
+                <li class="text-xesta-muted">Informativa: el correo no sustituye un encargo.</li>
+            </ul>
+        </div>
+    </div>
+    <p class="wrap pb-8 text-xs text-xesta-muted">© {new Date().getFullYear()} – Asesoría Xesta</p>
+</footer>

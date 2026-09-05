@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FaqList from '../components/FaqList.astro';
+import CtaButton from '../components/CtaButton.astro';
+import { EMAIL, PHONE_DISPLAY, PHONE_TEL } from '../lib/cta';
+---
+
+<Layout
+    title="Preguntas | Pack profesorado | Asesoría Xesta"
+    description="IVA, retención, modelos 303 y 130, cuota de autónomo y Renta: las aclaraciones del pack para profesorado artístico."
+>
+    <section class="section pt-12 sm:pt-16">
+        <div class="wrap max-w-3xl">
+            <p class="kicker">Preguntas</p>
+            <h1 class="mt-4">303, 130, retención y cuota.</h1>
+            <p class="lede mt-6">
+                En la landing va el oficio. Aquí van los modelos, el 70 % de ingresos y lo que incluye el pack.
+            </p>
+            <p class="mt-4 text-sm text-xesta-muted">
+                <a class="link" href="/">← Volver al pack</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="pb-20 sm:pb-28">
+        <div class="wrap max-w-3xl">
+            <FaqList />
+        </div>
+    </section>
+
+    <section class="px-4 pb-16 sm:px-8 sm:pb-24 lg:px-10">
+        <div class="mx-auto max-w-3xl rounded-[2rem] bg-xesta-ink px-8 py-12 text-white sm:px-12">
+            <h2 class="text-white">¿Crees que encajas?</h2>
+            <p class="mt-4 text-white/80">Escríbenos y te decimos si el pack aplica.</p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <CtaButton size="lg">Quiero este pack</CtaButton>
+                <a href={`tel:${PHONE_TEL}`} class="btn btn-ghost text-white ring-white/40 hover:bg-white hover:text-xesta-ink">
+                    {PHONE_DISPLAY}
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-white/60">{EMAIL}</p>
+        </div>
+    </section>
+</Layout>

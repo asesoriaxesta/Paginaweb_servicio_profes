@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Heebo', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Titillium Web', ui-sans-serif, system-ui, sans-serif;
+    --color-primary: #47a06b;
+    --color-primary-content: #212529;
+    --color-xesta-bg: #ffffff;
+    --color-xesta-ink: #212529;
+    --color-xesta-muted: #5e5c45;
+    --color-xesta-green: #47a06b;
+    --color-xesta-yellow: #ffe847;
+    --color-xesta-yellow-deep: #f3eb4f;
+    --color-xesta-line: #ecece4;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-xesta-bg font-sans text-xesta-ink;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-heading);
+        @apply font-bold tracking-tight text-balance;
+    }
+
+    h1 {
+        @apply text-3xl leading-[1.2] sm:text-5xl lg:text-6xl;
+    }
+
+    h2 {
+        @apply text-2xl leading-tight sm:text-3xl lg:text-4xl;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-xesta-green);
+        outline-offset: 3px;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+}
+
+@layer components {
+    .skip-link {
+        @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:no-underline focus:shadow-md;
+    }
+
+    .btn {
+        @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-xesta-yellow px-6 py-2.5 text-center text-sm font-bold uppercase tracking-wide text-xesta-ink no-underline transition-colors;
+        font-family: var(--font-heading);
+    }
+
+    .btn:hover {
+        @apply bg-xesta-green text-white;
+    }
+
+    .btn-lg {
+        @apply min-h-12 px-8 py-3 text-base;
+    }
+
+    .btn-ghost {
+        @apply bg-transparent ring-2 ring-xesta-yellow;
+    }
+
+    .btn-ghost:hover {
+        @apply bg-xesta-yellow text-xesta-ink ring-xesta-yellow;
+    }
+
+    .link {
+        @apply text-xesta-green underline decoration-xesta-green/40 underline-offset-4 transition-opacity hover:opacity-80;
+    }
+
+    .wrap {
+        @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-10;
+    }
+
+    .section {
+        @apply py-16 sm:py-24 lg:py-28;
+    }
+
+    .kicker {
+        @apply font-heading text-sm font-bold uppercase tracking-[0.14em] text-xesta-ink;
+    }
+
+    .lede {
+        @apply max-w-xl text-base leading-relaxed text-xesta-muted sm:text-[1.05rem];
+    }
+
+    .photo {
+        @apply w-full object-cover;
+        border-radius: 1.75rem;
+    }
+
+    .faq-item {
+        @apply border-b border-xesta-line;
+    }
+
+    .faq-item summary {
+        @apply flex cursor-pointer list-none items-start justify-between gap-4 py-6 text-left font-heading text-lg font-semibold;
+    }
+
+    .faq-item summary .chevron {
+        @apply mt-1 shrink-0 text-xesta-green transition-transform;
+    }
+
+    .faq-item[open] summary .chevron {
+        transform: rotate(45deg);
+    }
+
+    .faq-item .faq-body {
+        @apply max-w-2xl space-y-3 pb-6 text-sm leading-relaxed text-xesta-muted sm:text-base;
+    }
+}

@@ -1,0 +1,15 @@
+---
+interface Props {
+    class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<img
+    src="/img/xesta-logo.webp"
+    alt="Asesoría Xesta"
+    width="170"
+    height="54"
+    class:list={['h-10 w-auto sm:h-11', className]}
+/>

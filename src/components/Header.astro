@@ -1,0 +1,44 @@
+---
+import Logo from './Logo.astro';
+import CtaButton from './CtaButton.astro';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const navItems = [
+    { href: '/#para-quien', label: 'Para quién' },
+    { href: '/#pack', label: 'El pack' },
+    { href: '/preguntas', label: 'Preguntas', current: path === '/preguntas' }
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md">
+    <div class="wrap flex items-center justify-between gap-4 py-4">
+        <a href="/" class="no-underline" aria-label="Asesoría Xesta, inicio">
+            <Logo />
+        </a>
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Secciones">
+            {
+                navItems.map((item) => (
+                    <a
+                        href={item.href}
+                        class:list={[
+                            'font-heading text-sm font-bold uppercase tracking-wide text-xesta-ink no-underline hover:text-xesta-green',
+                            item.current && 'text-xesta-green'
+                        ]}
+                    >
+                        {item.label}
+                    </a>
+                ))
+            }
+        </nav>
+        <div class="flex items-center gap-3">
+            <a
+                href="/preguntas"
+                class="font-heading text-sm font-bold uppercase tracking-wide text-xesta-ink no-underline hover:text-xesta-green lg:hidden"
+            >
+                Preguntas
+            </a>
+            <CtaButton>¿Hablamos?</CtaButton>
+        </div>
+    </div>
+</header>

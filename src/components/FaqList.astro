@@ -1,0 +1,23 @@
+---
+import { faqs } from '../data/faqs';
+---
+
+<div>
+    {
+        faqs.map((item) => (
+            <details class="faq-item">
+                <summary>
+                    <span>{item.q}</span>
+                    <span class="chevron" aria-hidden="true">
+                        +
+                    </span>
+                </summary>
+                <div class="faq-body">
+                    {item.a.map((p) => (
+                        <p>{p}</p>
+                    ))}
+                </div>
+            </details>
+        ))
+    }
+</div>

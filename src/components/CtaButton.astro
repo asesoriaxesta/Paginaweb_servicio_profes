@@ -1,0 +1,23 @@
+---
+import { mailtoHref } from '../lib/cta';
+
+interface Props {
+    class?: string;
+    size?: 'sm' | 'lg';
+    variant?: 'solid' | 'ghost';
+}
+
+const { class: className = '', size = 'sm', variant = 'solid' } = Astro.props;
+---
+
+<a
+    href={mailtoHref}
+    class:list={[
+        'btn',
+        size === 'lg' && 'btn-lg',
+        variant === 'ghost' && 'btn-ghost',
+        className
+    ]}
+>
+    <slot>Escribir para ver si encaja</slot>
+</a>
