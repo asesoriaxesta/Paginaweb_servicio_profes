@@ -15,3 +15,8 @@ Teléfono:
 `;
 
 export const mailtoHref = `mailto:${EMAIL}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(BODY)}`;
+
+const WHATSAPP_TEXT =
+    'Hola, doy formación artística y quiero comprobar si el pack de profesorado me encaja.';
+
+export const whatsappHref = `https://wa.me/34681083084?text=${encodeURIComponent(WHATSAPP_TEXT)}`;

@@ -81,7 +81,7 @@ export const faqs = [
         q: '¿Cómo os escribo y qué pasa después?',
         a: [
             'El botón abre el correo a info@asesoriaxesta.com con un asunto y un texto ya preparados (disciplina, que facturas formación con retención, que quieres comprobar encaje). Si el correo no se abre, copia la dirección en texto.',
-            'Os leemos y os decimos si el pack aplica. El precio, si encaja, se habla en ese hilo. El teléfono es 681 083 084.'
+            'También puedes escribir por WhatsApp al 681 083 084, con la burbuja de la esquina. Os leemos y os decimos si el pack aplica. El precio, si encaja, se habla en ese hilo.'
         ]
     }
 ];

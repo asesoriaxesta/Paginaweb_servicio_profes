@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CtaButton from '../components/CtaButton.astro';
+import WhatsAppBubble from '../components/WhatsAppBubble.astro';
 
 interface Props {
     title: string;
@@ -38,6 +39,7 @@ const {
             <slot />
         </main>
         <Footer />
+        <WhatsAppBubble />
         <div
             class="fixed inset-x-0 bottom-0 z-40 border-t border-xesta-line bg-white/95 p-3 backdrop-blur-md md:hidden"
             style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom));"
