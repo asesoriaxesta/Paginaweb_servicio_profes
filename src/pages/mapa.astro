@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BrandMap from '../components/BrandMap.astro';
+import { mapStores } from '../data/map-stores';
+---
+
+<Layout
+    title="Mapa de prueba | Asesoría Xesta"
+    description="Prueba de mapa con estilo de marca: supermercados Mercadona en la provincia de Ourense."
+>
+    <section class="section pt-12 sm:pt-16 pb-8">
+        <div class="wrap max-w-3xl">
+            <p class="kicker">Prueba</p>
+            <h1 class="mt-4">Así se vería un mapa nuestro.</h1>
+            <p class="lede mt-6">
+                Ejemplo con supermercados Mercadona de la provincia de Ourense. No forma parte del pack: es una prueba de estilo, con vuestra paleta, tipografía y fichas.
+            </p>
+            <p class="mt-4 text-sm text-xesta-muted">
+                El distintivo del pin es nuestro, no el logo oficial de Mercadona. Direcciones de fuentes públicas (OpenStreetMap y directorios); pueden no estar al milímetro.
+            </p>
+            <p class="mt-4 text-sm text-xesta-muted">
+                <a class="link" href="/">← Volver al pack</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="px-4 pb-10 sm:px-8 lg:px-10">
+        <BrandMap />
+    </section>
+
+    <section class="pb-20 sm:pb-28">
+        <div class="wrap max-w-3xl">
+            <h2 class="font-heading text-lg font-bold">Las {mapStores.length} tiendas</h2>
+            <ul class="mt-6 divide-y divide-xesta-line">
+                {
+                    mapStores.map((store) => (
+                        <li class="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between">
+                            <span class="font-heading font-bold">{store.town}</span>
+                            <span class="text-sm text-xesta-muted">
+                                {store.address}, {store.postcode}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+</Layout>

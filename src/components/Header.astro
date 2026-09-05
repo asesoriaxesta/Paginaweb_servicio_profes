@@ -7,7 +7,8 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const navItems = [
     { href: '/#para-quien', label: 'Para quién' },
     { href: '/#pack', label: 'El pack' },
-    { href: '/preguntas', label: 'Preguntas', current: path === '/preguntas' }
+    { href: '/preguntas', label: 'Preguntas', current: path === '/preguntas' },
+    { href: '/mapa', label: 'Mapa', current: path === '/mapa' }
 ];
 ---
 
@@ -37,6 +38,12 @@ const navItems = [
                 class="font-heading text-sm font-bold uppercase tracking-wide text-xesta-ink no-underline hover:text-xesta-green lg:hidden"
             >
                 Preguntas
+            </a>
+            <a
+                href="/mapa"
+                class="font-heading text-sm font-bold uppercase tracking-wide text-xesta-ink no-underline hover:text-xesta-green lg:hidden"
+            >
+                Mapa
             </a>
             <CtaButton>¿Hablamos?</CtaButton>
         </div>
