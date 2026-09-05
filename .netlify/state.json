@@ -1,0 +1,21 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Lekeitio",
+			"country": {
+				"code": "ES",
+				"name": "Spain"
+			},
+			"subdivision": {
+				"code": "PV",
+				"name": "Basque Country"
+			},
+			"timezone": "Europe/Madrid",
+			"latitude": 43.3644,
+			"longitude": -2.4995,
+			"postalCode": "48280"
+		},
+		"timestamp": 1788610584066
+	},
+	"dbConnectionString": "postgres://localhost:54688/postgres"
+}
